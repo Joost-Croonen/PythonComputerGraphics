@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from numpy import sin, cos, tan, sqrt, pi, matmul, dot, arctan2, cross
+from numpy import sin, cos, tan, pi, matmul, dot, arctan2, cross
 from numpy.linalg import norm
 import copy
 
@@ -375,10 +375,10 @@ def ProjectVertex(v, cam):
     return hom3_to_can2(np.matmul(cam.M_proj, v)).astype(int)
 
 
-def ProjectVertex(v, M_trf, cam):
-    M = cam.M_proj
-    N = np.matmul(cam.M_proj, v).astype(int)
-    return hom3_to_can2(np.matmul(cam.M_proj, v)).astype(int)
+#def ProjectVertex(v, M_trf, cam):
+#    M = cam.M_proj
+#    N = np.matmul(cam.M_proj, v).astype(int)
+#    return hom3_to_can2(np.matmul(cam.M_proj, v)).astype(int)
 
 
 def RenderTriangle(triangle, projected, cam):
